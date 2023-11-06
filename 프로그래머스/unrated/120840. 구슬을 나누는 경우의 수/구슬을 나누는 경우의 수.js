@@ -1,5 +1,12 @@
-const 팩토리얼 = (num) => num === 0 ? 1 : num * 팩토리얼(num - 1)
-
 function solution(balls, share) {
-  return Math.round(팩토리얼(balls) / 팩토리얼(balls - share) / 팩토리얼(share))
+    function factorial(num) {
+        if (num === 0) return 1;
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    return Math.round(factorial(balls) / (factorial(share) * factorial(balls - share)));
 }
