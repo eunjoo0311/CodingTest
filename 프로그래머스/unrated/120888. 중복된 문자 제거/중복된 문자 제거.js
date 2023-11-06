@@ -1,6 +1,6 @@
 function solution(my_string) {
     var answer = '';
-    // 공백도 중복 가능
-    answer = [...new Set(my_string)].join('')
+    let arr = [...new Set(my_string)];
+    answer = arr.join('')
     return answer;
 }
