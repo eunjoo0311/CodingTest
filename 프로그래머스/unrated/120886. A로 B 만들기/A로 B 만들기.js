@@ -1,14 +1,11 @@
 function solution(before, after) {
     var answer = 0;
-    let arr = [...before].sort().join('');
-    let arr1 = [...after].sort().join('');
-    console.log(arr, arr1)
+    let b = [...before].sort().join('')
+    let a = [...after].sort().join('')
     
-    if(arr === arr1){
-        answer = 1
-    } else {
-        answer = 0
-    }
-   
+    console.log(b)
+    console.log(a)
+    
+    answer = a == b ? 1 : 0
     return answer;
 }
